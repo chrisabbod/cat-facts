@@ -9,19 +9,6 @@ import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
 
-    val catFactList: Set<String> = setOf(
-        "Cats are animals",
-        "Cats are usually small",
-        "Cats are usually furry",
-        "Cats are cute!",
-        "Cats are troublemakers",
-        "Lions are cats",
-        "Tigers are cats",
-        "Jaguars are cats",
-        "Panthers are cats",
-        "Cheetahs are cats"
-    )
-
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,12 +20,12 @@ class MainActivity : AppCompatActivity() {
 
         GlobalScope.launch {
             val result = catFactsAPI.getRandomFact()
-            Log.i("CAT FACT", result.fact)
-        }
 
-        binding.apply {
-            btnRandomFact.setOnClickListener {
-                tvRandomFact.text = catFactList.random()
+            binding.apply {
+                btnRandomFact.setOnClickListener {
+                    tvRandomFact.text = result.fact
+                    Log.e("FACT", result.fact)
+                }
             }
         }
     }
