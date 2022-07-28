@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">Cat Facts</string>
+    <string name="app_name">Cat Facts!</string>
+    <string name="random_fact">Click the button to get a random cat fact!</string>
+    <string name="button_random_cat_fact">RANDOM CAT FACT</string>
 </resources>
