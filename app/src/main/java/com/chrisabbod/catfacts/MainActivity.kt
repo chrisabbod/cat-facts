@@ -20,7 +20,6 @@ class MainActivity : AppCompatActivity() {
 
         GlobalScope.launch {
             val catFact = catFactsAPI.retrieveListOfFacts()
-            Log.i("Cat Fact: ", catFact.data.size.toString())
 
             binding.apply {
                 btnRandomFact.setOnClickListener {
