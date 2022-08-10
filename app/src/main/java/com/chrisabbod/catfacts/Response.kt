@@ -6,7 +6,7 @@ data class BaseJSONResponse(
     @SerializedName("current_page")
     var currentPage: Int,
     @SerializedName("data")
-    var data: List<Data>
+    var data: Set<Data>
 )
 
 data class Data(
