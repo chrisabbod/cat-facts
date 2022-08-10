@@ -19,11 +19,13 @@ class MainActivity : AppCompatActivity() {
         val catFactsAPI = RetrofitHelper.getInstance().create(CatFactsAPI::class.java)
 
         GlobalScope.launch {
-            val catFact = catFactsAPI.retrieveListOfFacts()
+            val catFact = catFactsAPI.retrieveListOfFacts(300, 100)
+//            val randomCatFact = catFactsAPI.retrieveRandomFact(50)
 
             binding.apply {
                 btnRandomFact.setOnClickListener {
                     tvRandomFact.text = catFact.data.random().fact
+//                    tvRandomFact.text = randomCatFact.fact
                 }
             }
         }
