@@ -2,7 +2,7 @@ package com.chrisabbod.catfacts
 
 import com.google.gson.annotations.SerializedName
 
-data class BaseJSONResponse(
+data class CatFactResponse(
     @SerializedName("current_page")
     var currentPage: Int,
     @SerializedName("data")

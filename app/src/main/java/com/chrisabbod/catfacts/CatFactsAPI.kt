@@ -14,5 +14,5 @@ interface CatFactsAPI {
     suspend fun retrieveListOfFacts(
         @Query("max_length") length: Int,
         @Query("limit") limit: Int
-    ): BaseJSONResponse
+    ): CatFactResponse
 }
